@@ -176,7 +176,8 @@ public class Mandlebrot extends javax.swing.JFrame {
                     pixels[y*width+x] = (255<<24);
                     
                 }else{
-                    pixels[y*width+x] = (255<<24)|(255<<16)|(255<<8)|255;
+                    int value = (int)Math.floor((255.0*i)/100.0);
+                    pixels[y*width+x] = (255<<24)|(0<<16)|(value<<8)|0;
                 }
             }
         }
